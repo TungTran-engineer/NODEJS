@@ -1,0 +1,68 @@
+<%- include('layouts/header.ejs'); %>
+<!-- Include Bootstrap CSS in your header.ejs -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+<main style="padding: 20px;">
+  <div style="display: flex; gap: 20px;">
+    <!-- Form tìm kiếm -->
+    <div>
+      <form method="GET" style="position: relative;">  
+        <h3>Tìm Kiếm</h3>  
+        <input value="<%= q %>" name="q" type="search" id="default-search"
+        placeholder="Search name or email ..." required />
+        <button type="submit"  
+                class="absolute inset-y-0 right-0 flex items-center pr-3 bg-blue-600 text-black rounded-lg px-4 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300">  
+            Search  
+        </button>  
+        <a href="/users/new" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #008CBA; color: white; text-align: center; text-decoration: none; border-radius: 5px;">  
+          Create
+       </a>
+      </form>  
+    </div>
+  
+    <!-- Bảng kết quả -->
+    <div>
+      <table class="table table-striped table-bordered table-hover">
+        <thead class="table-dark">
+          <tr>  
+            <th scope="col" class="px-6 py-3">Name</th>  
+            <th scope="col" class="px-6 py-3">Email</th>  
+            <th scope="col" class="px-6 py-3">Age</th>  
+            <th scope="col" class="px-6 py-3">Role</th>  
+            <th scope="col" class="px-6 py-3 text-center">Action</th>  
+          </tr>  
+        </thead>
+        <tbody>  
+          <% users.forEach((user) => { %>  
+          <tr class="odd:bg-white even:bg-gray-50 dark:hover:bg-gray-100">  
+              <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">  
+                  <%= user.name %>  
+              </th>  
+              <td class="px-6 py-4">  
+                  <%= user.email %>  
+              </td>  
+              <td class="px-6 py-4">  
+                  <%= user.age %>  
+              </td>  
+              <td class="px-6 py-4">  
+                  <%= user.role %>  
+              </td>  
+              <td class="px-6 py-4 text-center">  
+                <form action="/users/edit/<%= user._id %>" method="GET" style="display: inline;">
+                    <button type="submit" class="btn btn-primary btn-sm">Edit</button>
+                </form>
+                <form method="POST" action="/users/delete/<%= user._id %>" style="display: inline;">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </td>                    
+            </tr>  
+            <% }) %>  
+        </tbody>  
+      </table>
+    </div>
+  </div>
+</main>
+
+<%- include('layouts/footer.ejs'); %>

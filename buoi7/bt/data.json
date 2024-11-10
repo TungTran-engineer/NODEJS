@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Tra Mi",
+        "email": "trami@gmail.com",
+        "password":"123456789",
+        "workExperience":[],
+        "age":30,
+        "role":"User"
+    },
+    {
+        "name": "Nguyen Tra Mi",
+        "email": "ngtrami@gmail.com",
+        "password":"123456789",
+        "workExperience":[],
+        "age":17,
+        "role":"User"
+    },
+    {
+        "name": "Le Tra Mi",
+        "email": "letrami@gmail.com",
+        "password":"123456789",
+        "workExperience":[],
+        "age":20,
+        "role":"User"
+    },
+    {
+        "name": "Tran Tra Mi",
+        "email": "trantrami@gmail.com",
+        "password":"123456789",
+        "workExperience":[],
+        "age":27,
+        "role":"User"
+    },
+    {
+        "name": "Tran thi Tra Mi",
+        "email": "trantrami@gmail.com",
+        "password":"123456789",
+        "workExperience":[],
+        "age":27,
+        "role":"User"
+    }
+]
