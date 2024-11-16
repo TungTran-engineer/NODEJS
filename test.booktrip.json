@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "6737f28eaf94e1cf2e6e9740"
+  },
+  "customerName": "Nguyen Van A",
+  "date": "2024-11-20T14:00:00Z",
+  "time": "14:00",
+  "status": "Active",
+  "tripDetails": {
+    "destination": "Da Nang",
+    "price": 150,
+    "duration": "3 days"
+  }
+},
+{
+  "_id": {
+    "$oid": "6737f28eaf94e1cf2e6e9741"
+  },
+  "customerName": "Tran Thi B",
+  "date": "2024-11-25T09:30:00Z",
+  "time": "09:30",
+  "status": "Pending",
+  "tripDetails": {
+    "destination": "Ha Noi",
+    "price": 200,
+    "duration": "5 days"
+  }
+},
+{
+  "_id": {
+    "$oid": "6737f28eaf94e1cf2e6e9742"
+  },
+  "customerName": "Le Van C",
+  "date": "2024-12-01T16:00:00Z",
+  "time": "16:00",
+  "status": "Cancelled",
+  "tripDetails": {
+    "destination": "Ho Chi Minh City",
+    "price": 180,
+    "duration": "4 days"
+  }
+}]

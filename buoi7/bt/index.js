@@ -4,6 +4,7 @@ import { connectDB } from "./config/connectDB.js";
 import userRouter from "./routes/user.js";
 import bodyParser from "body-parser";
 import methodOverride from "method-override";
+import bookrouter from "./routes/booktripRoutes.js";
 
 connectDB();
 const app = express();
@@ -30,6 +31,7 @@ app.use(express.static("./buoi4/public"));
 app.use("/", rootRouter);
 app.use("/users", userRouter);
 app.use("/cv", userRouter);
+app.use("/book", bookrouter);
 
 app.listen(port, () => {
   console.log("Server started on port", port);
